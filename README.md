@@ -2,7 +2,7 @@
 ### Overview
 Starter project based on Next.js. It contains folder structure, code formatter and style linter. I made it for my own use but you can clone this project and use it to create your own Next.js project. Supports TypeScript.
 
-### Installation & Setting up Firebase
+### Installation
 Clone this repository:
 
 ```sh
