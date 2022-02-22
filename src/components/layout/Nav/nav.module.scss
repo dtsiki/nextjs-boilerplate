@@ -1,0 +1,13 @@
+.nav {
+  margin: 0 0 50px;
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    + .nav__item {
+      margin-left: 20px;
+    }
+  }
+}
