@@ -1,12 +1,19 @@
 import React from 'react';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { GetStaticProps, GetStaticPropsContext } from 'next';
+import { useTranslation } from 'next-i18next';
+import { i18n } from '../../next-i18next.config';
 
 const Home = (): JSX.Element => {
+  const { t } = useTranslation('page-index');
+
   return (
     <section className='section'>
-      <h1>Next.js Boilerplate</h1>
+      <h1>
+        {t('TEXT_TITLE')}
+      </h1>
       <p>
-        Next.js is an open-source development framework built on top of Node.js enabling React based web applications
-        functionalities such as server-side rendering and generating static websites. Powered by{' '}
+        {t('TEXT_P1')}{' '}
         <a
           href='https://nextjs.org/'
           target='_blank'
@@ -16,11 +23,18 @@ const Home = (): JSX.Element => {
         .
       </p>
       <p>
-        It`s starter project based on Next.js. It contains folder structure, code formatter and style linter. I
-        made it for my own use but you can clone this project and use it to create your own Next.js project.
+        {t('TEXT_P2')}
       </p>
     </section>
   );
 };
 
 export default Home;
+
+export const getStaticProps: GetStaticProps = async ({ locale }: GetStaticPropsContext) => {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale ?? i18n.defaultLocale, ['common', 'page-index']))
+    }
+  };
+}

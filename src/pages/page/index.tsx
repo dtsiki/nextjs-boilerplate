@@ -1,30 +1,48 @@
 import React, { ReactElement } from 'react';
 import Button from 'src/components/common/Button';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { GetStaticProps, GetStaticPropsContext } from 'next';
+import { useTranslation } from 'next-i18next';
+import { i18n } from '../../../next-i18next.config';
 
 const Page = (): ReactElement => {
-  const onClickButton = (): void => {
-    console.log('Yay');
+  const { t } = useTranslation('page-page');
+
+  const onButtonClick = (): void => {
+    console.log('Yay!')
   };
 
   return (
     <>
       <section className='section'>
-        <h1>Page</h1>
+        <h1>
+          {t('PAGE.TEXT_TITLE')}
+        </h1>
         <p>
-          Next.js supports a file-system based router. That means if you want to create a new page, you simply create a
-          new file with the name of route in <i>pages</i> folder. Just like this page.
+          {t('PAGE.TEXT_P')}
         </p>
       </section>
       <section className='section'>
-        <h2>Component</h2>
+        <h2>
+          {t('COMPONENT.TEXT_TITLE')}
+        </h2>
         <p>
-          Example of Button component is below. You cand find its source in folder <i>components</i> and create your own
-          custom components.
+          {t('COMPONENT.TEXT_P')}
         </p>
-        <Button onClick={() => onClickButton()}>Click me</Button>
+        <Button onClick={() => onButtonClick()}>
+          <span>💜</span>
+        </Button>
       </section>
     </>
   );
 };
 
 export default Page;
+
+export const getStaticProps: GetStaticProps = async ({ locale }: GetStaticPropsContext) => {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale ?? i18n.defaultLocale, ['common', 'page-page']))
+    }
+  };
+}

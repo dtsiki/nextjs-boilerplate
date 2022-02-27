@@ -1,0 +1,15 @@
+{
+  "HEAD": {
+    "TEXT_TITLE": "Next.js Boilerplate",
+    "TEXT_DESCRIPTION": "Starter project based on open-source framework Next.js",
+    "TEXT_KEYWORDS": "Next.js, JavaScript, TypeScript, frontend, base project, boilerplate, React"
+  },
+  "LANGUAGE" : {
+    "LINK_ENGLISH": "English",
+    "LINK_RUSSIAN": "Russian"
+  },
+  "MENU": {
+    "LINK_HOME": "Home",
+    "LINK_PAGE": "Page"
+  }
+}

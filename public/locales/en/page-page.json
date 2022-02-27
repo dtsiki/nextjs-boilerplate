@@ -1,0 +1,10 @@
+{
+  "PAGE": {
+    "TEXT_TITLE": "Page",
+    "TEXT_P": "Next.js supports a file-system based router. That means if you want to create a new page, you simply create a new file with the name of route in pages folder. Just like this page."
+  },
+  "COMPONENT": {
+    "TEXT_TITLE": "Component",
+    "TEXT_P": "Example of Button component is below. You cand find its source in folder components and create your own custom components."
+  }
+}

@@ -13,6 +13,11 @@ a {
   &:visited {
     color: $color--violet-lighter;
   }
+
+  &.active {
+    text-decoration: none;
+    color: $color--black-lighter;
+  }
 }
 
 .section {

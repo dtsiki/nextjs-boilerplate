@@ -1,1 +1,14 @@
-.nav {}
+@import './../../../styles/colors';
+
+.header {
+    display: flex;
+    justify-content: space-between;
+
+    &__languages {
+        display: flex;
+
+        li {
+            margin-right: 10px;
+        }
+    }
+}

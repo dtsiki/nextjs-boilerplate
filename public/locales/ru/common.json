@@ -1,0 +1,15 @@
+{
+  "HEAD": {
+    "TEXT_TITLE": "Шаблон проекта на Next.js",
+    "TEXT_DESCRIPTION": "Шаблон проекта, основанный на фреймворке с открытым исходным кодом Next.js",
+    "TEXT_KEYWORDS": "Next.js, JavaScript, TypeScript, frontend, базовый проект, шаблон, React"
+  },
+  "LANGUAGE" : {
+    "LINK_ENGLISH": "Английский",
+    "LINK_RUSSIAN": "Русский"
+  },
+  "MENU": {
+    "LINK_HOME": "Главная",
+    "LINK_PAGE": "Страница"
+  }
+}
